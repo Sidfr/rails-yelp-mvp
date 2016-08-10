@@ -6,10 +6,11 @@
 <% @restaurants.each do |restaurant| %>
 <%= "#{restaurant.id}: #{restaurant.name} - #{restaurant.address} // #{restaurant.phone_number} - #{restaurant.category}" %> </h2>
 <p>
-<%= link_to "Edit", edit_restaurant_path(restaurant), method: :get%>
-<%= link_to "Show", restaurant_path(restaurant), method: :get%>
-<%= link_to "Add a review", new_restaurant_review_path(restaurant), method: :get%></p>
+<%= link_to "Edit", edit_restaurant_path(restaurant), method: :get, class: "btn btn-success"%>
+<%= link_to "See details", restaurant_path(restaurant), method: :get, class: "btn btn-primary"%>
+<%= link_to "Add a review", new_restaurant_review_path(restaurant), method: :get,  class: "btn btn-info"%></p>
 </p>
 <hr>
 <% end %>
+
 
